@@ -1,0 +1,22 @@
+/* ---------------------------------------------
+*   header
+--------------------------------------------- */
+.footer {
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 150px;
+
+  @include sp {
+    margin-top: 16vw;
+    padding: 3vw 0;
+    font-size: pxtovw(28,'sp');
+  }
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

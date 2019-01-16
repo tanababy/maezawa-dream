@@ -1,0 +1,62 @@
+/* ---------------------------------------------
+*   html, body
+--------------------------------------------- */
+html,
+body {
+  color: $root-fc;
+  font-size: $root-fz-pc * 1px;
+  font-family: $root-ff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  background-color: #F5F5F2;
+
+  @include sp {
+    font-size: pxtovw($root-fz-sp, "sp");
+  }
+}
+body {
+  line-height: $line-height-pc;
+  min-width: $minwidth-pc * 1px;
+
+  @include sp {
+    line-height: $line-height-sp;
+    min-width: $minwidth-sp * 1px;
+  }
+}
+
+/* ---------------------------------------------
+*   <a> tag
+--------------------------------------------- */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---------------------------------------------
+*   <img> tag
+--------------------------------------------- */
+img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  vertical-align: bottom;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+}
+
+/* ---------------------------------------------
+*   responsive style
+--------------------------------------------- */
+@include not-pc {
+  .sp-hide {
+    display: none !important;
+  }
+}
+@include not-sp {
+  .pc-hide {
+    display: none !important;
+  }
+}

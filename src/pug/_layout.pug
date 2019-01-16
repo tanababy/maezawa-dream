@@ -1,0 +1,20 @@
+include ./_config.pug
+doctype html
+html(lang="ja")
+head
+  include ./_include/_inc_meta.pug
+  include ./_include/_inc_css.pug
+
+body(class=KEY)
+  //- include ./_include/_inc_header.pug
+
+  .loader-wrap
+    <div class="loader"><div class="line-scale"><div></div><div></div><div></div><div></div><div></div></div></div>
+  .loading
+    p.loading__layer1(data-splitting) #夢語るから金をくれ
+    p.loading__layer2(data-splitting) #夢作成ジェネレーター
+  .wrapper
+    block contents
+
+  include ./_include/_inc_footer.pug
+  include ./_include/_inc_js.pug
